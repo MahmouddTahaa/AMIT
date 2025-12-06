@@ -3,7 +3,7 @@ import sqlite3
 import random
 import os
 
-conn = sqlite3.connect('./student_db.db')
+conn = sqlite3.connect('./student_db.db', check_same_thread=False)
 cursor = conn.cursor()
 
 def reset_database():
