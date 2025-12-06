@@ -15,7 +15,7 @@ elif os.path.exists(candidate3):
     db_path = candidate3
 else:
     db_path = candidate3
-conn = sqlite3.connect('python-for-ml/team_randomizer/db/student_db.db')
+conn = sqlite3.connect('./student_db.db')
 cursor = conn.cursor()
 
 def reset_database():
