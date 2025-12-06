@@ -3,18 +3,6 @@ import sqlite3
 import random
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-candidate1 = os.path.abspath(os.path.join(BASE_DIR, '..', 'db', 'student_db.db'))
-candidate2 = os.path.abspath(os.path.join(BASE_DIR, '..', '..', 'db', 'student_db.db'))
-candidate3 = os.path.abspath(os.path.join(BASE_DIR, '..', '..', '..', 'db', 'student_db.db'))
-if os.path.exists(candidate1):
-    db_path = candidate1
-elif os.path.exists(candidate2):
-    db_path = candidate2
-elif os.path.exists(candidate3):
-    db_path = candidate3
-else:
-    db_path = candidate3
 conn = sqlite3.connect('./student_db.db')
 cursor = conn.cursor()
 
