@@ -44,7 +44,7 @@ if submit:
             if count < 4:
                 available_teams.append(team_id)
         if not available_teams:
-            st.warning("All teams are full!")
+            st.warning("Sorry, All teams are full!")
         else:
             assigned_team = random.choice(available_teams)
             cursor.execute(
