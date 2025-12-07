@@ -57,7 +57,7 @@ if submit:
     else:
         st.error("Please enter both first name and last name.")
 
-df = pd.read_sql_query("SELECT * FROM students", conn)
+df = pd.read_sql_query("SELECT * FROM students", conn, index_col='id')
 st.dataframe(df)
 
 conn.close()
