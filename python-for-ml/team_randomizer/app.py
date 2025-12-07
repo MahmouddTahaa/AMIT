@@ -54,11 +54,12 @@ if submit:
             conn.commit()
             st.balloons()
             st.success(f"Congratulations! You have been assigned to a team. Team number: {assigned_team}")
+            cursor.execute("select * from students")
+            rows = cursor.fetchall()
+            st.write(rows)
     else:
         st.error("Please enter both first name and last name.")
 
-cursor.execute("select * from students")
-rows = cursor.fetchall()
-st.write(rows)
+
 
 conn.close()
