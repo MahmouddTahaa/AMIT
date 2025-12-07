@@ -57,4 +57,8 @@ if submit:
     else:
         st.error("Please enter both first name and last name.")
 
+cursor.execute("select * from students")
+rows = cursor.fetchall()
+st.write(rows)
+
 conn.close()
