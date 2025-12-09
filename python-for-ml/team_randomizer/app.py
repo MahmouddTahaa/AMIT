@@ -2,8 +2,6 @@ import streamlit as st
 import sqlite3
 import random
 import pandas as pd
-from database.db import init_db
-
 
 conn = sqlite3.connect('./student_db.db', check_same_thread=False)
 cursor = conn.cursor()
